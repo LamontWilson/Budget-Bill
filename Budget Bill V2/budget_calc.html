@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang ="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="title icon" href="images/title-img.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="budget_calc.css">
+
+    <title>Budget Calculator</title>
+  </head>
+  <!--begin dashboard-->
+  <!--navbar header-->
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <button class="navbar-toggler sideMenuToggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">Budget Bill</a>
+          <button 
+          class="navbar-toggler" type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+            href="#" id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+              by Lamont
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="http://www.linkedin.com/in/lamont-wilson">LinkedIn</a>
+              <a class="dropdown-item" href="https://mscoding.org/golden-triangle/">Coding Academy</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://github.com/LamontWilson">GitHub</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--end navbar header-->
+    <!-- begin sidebar-->
+    <div class="wrapper d-flex">
+          <div class="sideMenu bg-mattBlackLight">
+            <div class="sidebar">
+              <!--navbar buttons-->
+              <ul class="navbar-nav">
+
+                <!--dashboard; links to dashboard-->
+                <li class="nav-item">
+                  <a href="dashboard.html" class="nav-link px-2"><i class="fa fa-home fa-md mr-3"></i>
+                    <span class="text">Dashboard</span></a></li>
+                    
+                <!--calculator; links to calculator-->
+                <li class="nav-item">
+                  <a href="budget_calc.html" class="nav-link px-2"><i class="fa fa-calculator fa-md mr-3"></i>
+                    <span class="text">Budget Calculator</span></a></li>
+                    
+                <!--user profile; links nowhere, might link to portfolio.html-->
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2"><i class="fa fa-user  fa-md"></i>
+                <span class="text">User Profile</span></a></li>
+                    
+                <!--Calendar; links to google-->
+                <li class="nav-item">
+                  <a href="https://www.google.com/calendar/render?pli=1" class="nav-link px-2"><i class="fa fa-calendar fa-md mr-3"></i>
+                    <span class="text">Calendar</span></a></li>
+                    
+                <!--settings; links nowhere-->
+                <li class="nav-item">
+                  <a href="#" class="nav-link px-2"><i class="fa fa-wrench fa-md mr-3"></i>
+                    <span class="text">Settings</span></a></li>
+                    
+                <!--resize; links nowhere but hides Menu-->
+                <li class="nav-item">
+                  <a href="#" class="nav-link px-2 sideMenuToggler"><i class="fa fa-list  fa-md mr-3"></i>
+                    <span class="text">Resize</span></a></li>
+                    
+            <!--end navbar buttons-->
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <!--budget calculator-->
+    <div class="top">
+      <div class="budget">
+        <div class="budget__title">
+          <!--monthly budget total-->
+          Available Budget in <span class="budget__title--month">%Month%</span>:
+        </div>  
+        <div class="budget__value">+</div>
+
+        <!--income display-->
+        <div class="budget__income clearfix">
+          <div class="budget__income--text">Income</div>
+          <div class="right">
+            <div class="budget__income--value">+</div>
+            <div class="budget__income--percentage">&nbsp;</div>
+          </div>
+        </div>
+
+        <!--expense display-->
+        <div class="budget__expenses clearfix">
+          <div class="budget__expenses--text">Expenses</div>
+          <div class="right clearfix">
+            <div class="budget__expenses--value">-</div>
+            <div class="budget__expenses--percentage">%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--end gross display-->
+
+  <div class="bottom">
+      <!--begin input bar-->  
+      <div class="add">
+        <div class="add__container">
+          <select class="add__type">
+            <option value="inc" selected>+</option><!--income-->
+            <option value="exp">-</option><!--expense-->
+          </select>
+          <!--text input-->
+          <input type="text" class="add__description" placeholder="Add description">
+          <!--number input-->
+          <input type="number" class="add__value" placeholder="Value">
+          <!--button submit-->
+          <button class="add__btn"><i class="fa fa-check-circle-o"></i></button>
+        </div>
+      </div>
+      <!--end input bar-->
+
+      <!--begin income/expense lists-->
+      <div class="container clearfix">
+        <div class="income">
+          <h2 class="income__title">Income</h2>  
+          <div class="income__list">
+          </div>
+        </div>
+
+        <div class="expenses">
+          <h2 class="expenses__title">Expenses</h2>  
+          <div class="expenses__list">
+          </div>
+        </div>
+      <!--end listing-->
+      </div>
+    </div>
+
+
+
+    <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <!-- Compiled JavaScript used -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!--custom scripts-->
+  <script src="budget_calc.js"></script>
+  <script src="dashboard.js"></script>
+  </body>
+  </html>

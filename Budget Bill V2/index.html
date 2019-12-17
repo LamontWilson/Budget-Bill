@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang ="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="title icon" href="images/title-img.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Dashboard Login</title>
+  </head>
+
+
+  <body>
+    <div id="form_wrapper">
+      <!--shows generic image/password requirements-->
+      <div id="form_left">
+          <img id="computer icon" src="images/desktop.jpg" alt="computer icon">
+          <div id="message" style="display: none">
+              <h3>Password must contain the following:</h3>
+              <p id="letter" class="invalid">A<b> lowercase</b> letter</p>
+              <p id="capital" class="invalid">A<b> uppercase</b> letter</p>
+              <p id="number" class="invalid">A<b> number</b></p>
+              <p id="length" class="invalid">Minimum<b> 8 characters</b></p>
+          </div>
+      </div>
+      <!--end left-->
+      <!--where email & password are input-->
+      <div id="form_right">        
+        <h1>Member Login</h1>
+        <!--email-->
+        <div class="input_container">
+          <i class="fa fa-envelope"></i>
+          <input placeholder="Email" type="email" name="Email" id="field_email"
+          class="input_field" required>
+        </div>
+        <!--password-->
+        <div class="input_container">
+          <i class="fa fa-lock"></i>
+          <input class="input_field" placeholder="Password" type="password" name="Password" id="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required>
+        </div>
+        <!--login button; disabled until email & password have content-->
+        <form action="dashboard.html">
+          <input id="submit" type="submit" class="submit_button" value="Login">
+          <a href="dashboard.html"></a>
+        </form>      
+        <!--forgot & create; does nothing-->
+        <div id="forgot">
+          <span>Forgot <a href="#"> Username / Password ?</a></span>
+          <span id='create_account'>
+            <a href="#">Create your account ➡</a>
+          </span>
+        </div>        
+      <!--end right-->      
+      </div>
+      <!--end wrapper-->
+    </div>
+  </body>    
+    
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <!-- Compiled JavaScript used-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!--custom scripts-->
+  <script src="login.js"></script>
+</html>

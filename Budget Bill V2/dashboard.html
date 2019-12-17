@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang ="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="title icon" href="images/title-img.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f95fd275d1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="dash_styles.css">
+    <link rel="stylesheet" href="to-do.css">
+    <title>Dashboard Bill</title>
+  </head>  
+    <!--begin dashboard-->
+    <!--navbar header-->
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler sideMenuToggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Budget Bill</a>
+      <button 
+      class="navbar-toggler" type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"
+        href="#" id="navbarDropdown"
+        role="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+          by Lamont
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://www.linkedin.com/in/lamont-wilson">LinkedIn</a>
+          <a class="dropdown-item" href="https://mscoding.org/golden-triangle/">Coding Academy</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://github.com/LamontWilson">GitHub</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--end navbar header-->
+
+<!-- begin sidebar-->
+<div class="wrapper d-flex">
+  <div class="sideMenu bg-mattBlackLight">
+    <div class="sidebar">
+	  <!--navbar buttons-->
+      <ul class="navbar-nav">
+		<!--dashboard; links nowhere-->
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2"><i class="fa fa-home fa-md
+            mr-3"></i>
+		  <span class="text">Dashboard</span></a></li>
+		  
+    <!--calculator; links to calculator-->
+        <li class="nav-item">
+          <a href="budget_calc.html" class="nav-link px-2"><i class="fa fa-calculator  fa-md
+            mr-3"></i>
+      <span class="text">Budget Calculator</span></a></li>
+
+		<!--user profile; links to Desktop\portfolio\index.html; might change to use github linky-->
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2"><i class="fa fa-user  fa-md
+            mr-3"></i>
+		  <span class="text">User Profile</span></a></li>
+		  
+      
+      <!--Calendar; links to google-->
+        <li class="nav-item">
+          <a href="https://www.google.com/calendar/render?pli=1" class="nav-link px-2"><i class="fa fa-calendar  fa-md
+          mr-3"></i>
+      <span class="text">Calendar</span></a></li>
+
+      <!--settings; links nowhere-->
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2"><i class="fa fa-wrench  fa-md
+          mr-3"></i>
+      <span class="text">Settings</span></a></li>	
+        
+		<!--resize; links nowhere but hides Menu-->
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 sideMenuToggler"><i class="fa fa-list  fa-md
+            mr-3"></i>
+      <span class="text">Resize</span></a></li>
+        <!--end navbar buttons-->
+      </ul>
+    </div>
+  </div>
+  <!--to-do list-->
+  <div class="content">
+    <main>
+      <div class="container-fluid">
+          <div id="addItem" class="header bg-mattBlackLight">
+            <h2>To Do</h2>
+            <!--input bar for adding new entries-->
+            <input type="text" id="input-list" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          <!--new entries are updated here-->
+          <ul id="list"></ul>     
+      </div>
+      <!--end container-->
+    </main>
+  </div>
+  <!--end to-do list-->
+</div>
+<!--end wrapper-->
+</body> 
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="dashboard.js"></script>
+
+</html>
